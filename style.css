@@ -24,6 +24,7 @@
 }
 
 html {
+    scroll-padding-top: 100px; /* Adjust based on navbar height */
     scroll-behavior: smooth;
 }
 
@@ -52,22 +53,29 @@ h1, h2, h3 {
    HEADER
 =================================*/
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 .brand {
     display: flex;
-    align-items: center; /* Aligns logo and text perfectly on the same line */
+    align-items: center;
 }
 
 .logo-img {
     height: 60px;
-    width: auto;        /* Let the width scale proportionally */
-    margin-right: 15px; /* Space between logo and "MR Restaurant" */
+    width: auto;
+    margin-right: 15px;
 }
 
 .logo-text {
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
-    color:  #c59d5f;     /* Matching that gold color in your image */
-    margin: 0;          /* Removes default heading margins */
+    color: #c59d5f;
+    margin: 0;
 }
 
 .header {
@@ -119,6 +127,43 @@ h1, h2, h3 {
 
 .menu a:hover::after {
     width: 100%;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .brand {
+        justify-content: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        display: block;
+        padding: 8px 0;
+    }
+
+    .logo-img {
+        height: 50px;
+    }
+
+    .logo-text {
+        font-size: 1.3rem;
+    }
 }
 
 /* ===============================
