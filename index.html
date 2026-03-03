@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MR Restaurant</title>
+    <link rel="icon" href="/img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container nav">
+        <div class="brand">
+            <img src="/img/logobg.png" alt="MR Restaurant Logo" class="logo-img">
+            <h2 class="logo-text">MR Restaurant</h2>
+        </div>
+
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-container">
+        <div class="hero-text">
+            <p class="welcome">Welcome to</p>
+            <h1><span>MR</span> RESTAURANT</h1>
+            <p class="tagline">
+                Delicious & Freshly Sourced Food <br>
+                Served with Hospitality
+            </p>
+            <a href="#menu" class="btn-hero">View Menu</a>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about fade-up" id="about">
+    <div class="container about-grid">
+        <div>
+            <h2>About Our Restaurant</h2><br>
+            <ul class="about-points">
+    <li>✔ Wide variety of delicious Vegetarian & Non-Vegetarian dishes</li>
+    <li>✔ Fresh, locally sourced and high-quality ingredients</li>
+    <li>✔ Authentic traditional recipes with modern presentation</li>
+    <li>✔ Special grilled items, pizzas, burgers & chef’s signature dishes</li>
+    <li>✔ Separate preparation standards for hygiene & food safety</li>
+    <li>✔ Comfortable ambience for family dining & celebrations</li>
+    <li>✔ Friendly staff and professional customer service</li>
+    <li>✔ Dine-in, takeaway & fast home delivery available</li>
+</ul>
+<br>
+         <a href="#menu" class="btn-outline">Discover More</a>
+        </div>
+        <div class="about-img">
+            <img src="/img/rest.png" alt="Restaurant">
+        </div>
+    </div>
+</section>
+
+
+<!-- SERVICES -->
+<section class="section services fade-up" id="services">
+    <div class="container">
+        <h2 class="center">Our Services</h2><br>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <h3>🍽 Dine In</h3>
+                <p>
+                    Enjoy a premium dining experience with elegant ambience 
+                    and comfortable seating for family and friends.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🚀 Fast Delivery</h3>
+                <p>
+                    Get your favorite meals delivered hot and fresh 
+                    to your doorstep within minutes.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📅 Online Reservation</h3>
+                <p>
+                    Reserve your table easily through our online 
+                    booking system with instant confirmation.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- MENU -->
+<section class="section menu-section fade-up" id="menu">
+    <div class="container">
+        <h2 class="center">Popular Dishes</h2><br>
+
+        <div class="card-grid">
+
+            <div class="card food-card">
+                <img src="/img/idly.png" alt="Idly">
+                <h3>Idly</h3>
+                <p class="price">₹179</p>
+            </div>
+
+            <div class="card food-card">
+                <img src="/img/dosa.png" alt="Dosa ">
+                <h3>Dosa </h3>
+                <p class="price">₹269</p>
+            </div>
+
+            <div class="card food-card">
+                <img src="/img/chappathi.png" alt="chapat">
+                <h3>Chapati</h3>
+                <p class="price">₹289</p>
+            </div>
+
+            <div class="card food-card">
+                <img src="/img/poori.png" alt="Poori Masala">
+                <h3>Poori Masala</h3>
+                <p class="price">₹289</p>
+            </div>
+
+            <div class="card food-card">
+                <img src="/img/bur.png" alt="Burger">
+                <h3>Veg Burger</h3>
+                <p class="price">₹349</p>
+            </div>
+
+            <div class="card food-card">
+                <img src="/img/pizza.png" alt="Pizza">
+                <h3>Pizza Special</h3>
+                <p class="price">₹399</p>
+            </div>
+
+            <div class="card food-card">
+                <img src="/img/cb.png" alt="Chicken Briyani">
+                <h3>Chicken Briyani</h3>
+                <p class="price">₹479</p>
+            </div>
+
+            <div class="card food-card">
+                <img src="/img/grill.png" alt="Grilled Chicken">
+                <h3>Grilled Chicken</h3>
+                <p class="price">₹699</p>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact fade-up" id="contact">
+    <div class="container contact-box">
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <br>
+        <p id="successMsg" class="success-message"></p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 MR Restaurant | Designed by Manoj</p>
+</footer>
+
+<!-- LIGHT JS -->
+<script>
+    // Scroll Animation
+    const elements = document.querySelectorAll('.fade-up');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('show');
+            }
+        });
+    });
+
+    elements.forEach(el => observer.observe(el));
+
+    // Form Submit Message
+    const form = document.getElementById("contactForm");
+    const msg = document.getElementById("successMsg");
+
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        msg.innerText = "✅ Thank you! Your message has been sent successfully.";
+        msg.style.display = "block";
+        form.reset();
+    });
+</script>
+
+</body>
+</html>
