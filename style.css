@@ -132,40 +132,48 @@ h1, h2, h3 {
 /* ✅ Mobile Responsive */
 @media (max-width: 768px) {
 
-    .nav {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+    .header {
+        padding: 12px 0;
     }
 
-    .brand {
-        justify-content: center;
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .menu {
-        flex-direction: column;
         gap: 15px;
-        padding: 0;
-    }
-
-    .menu li {
-        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .menu a {
-        display: block;
-        padding: 8px 0;
+        font-size: 14px;
     }
 
     .logo-img {
-        height: 50px;
+        height: 45px;
     }
 
     .logo-text {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+
+    /* Hero Fix */
+    .hero {
+        height: 100vh;
+        padding: 0 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .tagline {
+        font-size: 15px;
     }
 }
-
 /* ===============================
    HERO SECTION
 =================================*/
