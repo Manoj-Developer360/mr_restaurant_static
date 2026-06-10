@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     revealObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0 });
 
         document.querySelectorAll('[data-reveal]').forEach(function (el) {
             revealObserver.observe(el);

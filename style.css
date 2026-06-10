@@ -465,6 +465,15 @@ body.js-ready [data-reveal].revealed {
     transform: translateY(0);
 }
 
+/* Safety net: if observer never fires, force-reveal after 2s */
+@keyframes forceReveal {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body.js-ready [data-reveal]:not(.revealed) {
+    animation: forceReveal 0.01s 2s forwards;
+}
+
 /* ── ABOUT ───────────────────────────────────────── */
 .about-grid {
     display: grid;
