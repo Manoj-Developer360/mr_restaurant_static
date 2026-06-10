@@ -5,212 +5,398 @@
     <title>MR Restaurant</title>
     <link rel="icon" href="/img/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header">
+<!-- NAVBAR -->
+<header class="header" id="header">
     <div class="container nav">
-        <div class="brand">
+        <a href="#home" class="brand">
             <img src="/img/logobg.png" alt="MR Restaurant Logo" class="logo-img">
-            <h2 class="logo-text">MR Restaurant</h2>
-        </div>
+            <span class="logo-text">MR<em>Restaurant</em></span>
+        </a>
 
-        <ul class="menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <nav class="nav-links" id="navLinks">
+            <ul class="menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn-reserve">Reserve a Table</a>
+        </nav>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="home">
-    <div class="hero-overlay"></div>
+    <div class="hero-bg">
+        <img src="/img/banner.png" alt="Restaurant ambience" class="hero-img">
+        <div class="hero-overlay"></div>
+    </div>
 
-    <div class="hero-container">
-        <div class="hero-text">
-            <p class="welcome">Welcome to</p>
-            <h1><span>MR</span> RESTAURANT</h1>
-            <p class="tagline">
-                Delicious & Freshly Sourced Food <br>
-                Served with Hospitality
-            </p>
-            <a href="#menu" class="btn-hero">View Menu</a>
+    <div class="letterbox letterbox-top"></div>
+    <div class="letterbox letterbox-bottom"></div>
+
+    <div class="hero-content">
+        <p class="hero-eyebrow">Est. 2024 · Bangalore</p>
+        <h1 class="hero-title">
+            <span class="hero-title-mr">MR</span>
+            <span class="hero-title-rest">Restaurant</span>
+        </h1>
+        <p class="hero-sub">Honest food. Thoughtful sourcing. <br>Served with warmth.</p>
+        <div class="hero-actions">
+            <a href="#menu" class="btn-primary">Explore the Menu</a>
+            <a href="#about" class="btn-ghost">Our Story</a>
         </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
     </div>
 </section>
 
 <!-- ABOUT -->
-<section class="section about fade-up" id="about">
+<section class="section about" id="about" data-reveal>
     <div class="container about-grid">
-        <div>
-            <h2>About Our Restaurant</h2><br>
-            <ul class="about-points">
-    <li>✔ Wide variety of delicious Vegetarian & Non-Vegetarian dishes</li>
-    <li>✔ Fresh, locally sourced and high-quality ingredients</li>
-    <li>✔ Authentic traditional recipes with modern presentation</li>
-    <li>✔ Special grilled items, pizzas, burgers & chef’s signature dishes</li>
-    <li>✔ Separate preparation standards for hygiene & food safety</li>
-    <li>✔ Comfortable ambience for family dining & celebrations</li>
-    <li>✔ Friendly staff and professional customer service</li>
-    <li>✔ Dine-in, takeaway & fast home delivery available</li>
-</ul>
-<br>
-         <a href="#menu" class="btn-outline">Discover More</a>
+        <div class="about-image-wrap">
+            <img src="/img/rest.png" alt="Restaurant interior">
+            <div class="about-badge">
+                <span class="badge-num">12+</span>
+                <span class="badge-label">Years of<br>Hospitality</span>
+            </div>
         </div>
-        <div class="about-img">
-            <img src="/img/rest.png" alt="Restaurant">
+        <div class="about-text">
+            <p class="section-eyebrow">Who We Are</p>
+            <h2 class="section-title">A Place Where Every Meal Tells a Story</h2>
+            <p class="about-desc">
+                At MR Restaurant, we believe great food is built on great ingredients — sourced fresh daily from local farms and prepared with recipes passed down through generations. Every dish that leaves our kitchen carries the care and craft of our team.
+            </p>
+            <ul class="about-list">
+                <li>
+                    <span class="list-dot"></span>
+                    Vegetarian &amp; Non-Vegetarian menus crafted with equal care
+                </li>
+                <li>
+                    <span class="list-dot"></span>
+                    Fresh, locally sourced and high-quality ingredients
+                </li>
+                <li>
+                    <span class="list-dot"></span>
+                    Authentic recipes with contemporary presentation
+                </li>
+                <li>
+                    <span class="list-dot"></span>
+                    Dine-in, takeaway &amp; same-day home delivery
+                </li>
+                <li>
+                    <span class="list-dot"></span>
+                    Warm ambience for family dining &amp; celebrations
+                </li>
+            </ul>
+            <a href="#menu" class="btn-primary">View Our Menu</a>
         </div>
     </div>
 </section>
-
 
 <!-- SERVICES -->
-<section class="section services fade-up" id="services">
+<section class="section services" id="services" data-reveal>
     <div class="container">
-        <h2 class="center">Our Services</h2><br>
+        <div class="section-header">
+            <p class="section-eyebrow">What We Offer</p>
+            <h2 class="section-title">Dining, Delivered Your Way</h2>
+        </div>
 
-        <div class="card-grid">
-
-            <div class="card">
-                <h3>🍽 Dine In</h3>
-                <p>
-                    Enjoy a premium dining experience with elegant ambience 
-                    and comfortable seating for family and friends.
-                </p>
+        <div class="services-grid">
+            <div class="service-card" data-delay="0">
+                <div class="service-icon">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 36h32M12 36V20l12-8 12 8v16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="20" y="26" width="8" height="10" rx="1" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h3>Dine In</h3>
+                <p>An unhurried, elegant setting designed for families, couples, and celebrations. Every table treated like a private dining room.</p>
+                <span class="service-tag">Open 11am – 11pm</span>
             </div>
 
-            <div class="card">
-                <h3>🚀 Fast Delivery</h3>
-                <p>
-                    Get your favorite meals delivered hot and fresh 
-                    to your doorstep within minutes.
-                </p>
+            <div class="service-card service-card--featured" data-delay="100">
+                <div class="service-icon">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 24h4l4-12 8 20 4-8 3 6h13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="38" cy="36" r="4" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="16" cy="36" r="4" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h3>Fast Delivery</h3>
+                <p>Hot, fresh food at your door in under 40 minutes. Real-time tracking and contactless drop-off available across the city.</p>
+                <span class="service-tag">Avg. 35 min delivery</span>
             </div>
 
-            <div class="card">
-                <h3>📅 Online Reservation</h3>
-                <p>
-                    Reserve your table easily through our online 
-                    booking system with instant confirmation.
-                </p>
+            <div class="service-card" data-delay="200">
+                <div class="service-icon">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="12" width="32" height="28" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M8 20h32M16 8v8M32 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M16 28h6v6h-6z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h3>Reservations</h3>
+                <p>Book your table in seconds — online or by phone. Instant confirmation, flexible cancellation, and special occasion setups on request.</p>
+                <span class="service-tag">Instant confirmation</span>
             </div>
-
         </div>
     </div>
 </section>
 
-
 <!-- MENU -->
-<section class="section menu-section fade-up" id="menu">
+<section class="section menu-section" id="menu" data-reveal>
     <div class="container">
-        <h2 class="center">Popular Dishes</h2><br>
+        <div class="section-header">
+            <p class="section-eyebrow">The Kitchen</p>
+            <h2 class="section-title">Popular Dishes</h2>
+        </div>
 
-        <div class="card-grid">
+        <div class="menu-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="veg">Vegetarian</button>
+            <button class="filter-btn" data-filter="nonveg">Non-Veg</button>
+            <button class="filter-btn" data-filter="special">Specials</button>
+        </div>
 
-            <div class="card food-card">
-                <img src="/img/idly.png" alt="Idly">
-                <h3>Idly</h3>
-                <p class="price">₹179</p>
+        <div class="menu-grid">
+            <div class="food-card" data-category="veg" data-delay="0">
+                <div class="food-img-wrap">
+                    <img src="/img/idly.png" alt="Idly" loading="lazy">
+                    <span class="food-badge veg-badge">Veg</span>
+                </div>
+                <div class="food-info">
+                    <h3>Idly</h3>
+                    <p class="food-desc">Soft steamed rice cakes served with sambar and chutneys.</p>
+                    <div class="food-footer">
+                        <span class="price">₹179</span>
+                        <button class="btn-order" aria-label="Order Idly">+ Add</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="card food-card">
-                <img src="/img/dosa.png" alt="Dosa ">
-                <h3>Dosa </h3>
-                <p class="price">₹269</p>
+            <div class="food-card" data-category="veg" data-delay="75">
+                <div class="food-img-wrap">
+                    <img src="/img/dosa.png" alt="Dosa" loading="lazy">
+                    <span class="food-badge veg-badge">Veg</span>
+                </div>
+                <div class="food-info">
+                    <h3>Dosa</h3>
+                    <p class="food-desc">Crisp golden crepe with spiced potato filling, served with coconut chutney.</p>
+                    <div class="food-footer">
+                        <span class="price">₹269</span>
+                        <button class="btn-order" aria-label="Order Dosa">+ Add</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="card food-card">
-                <img src="/img/chappathi.png" alt="chapat">
-                <h3>Chapati</h3>
-                <p class="price">₹289</p>
+            <div class="food-card" data-category="veg" data-delay="150">
+                <div class="food-img-wrap">
+                    <img src="/img/chappathi.png" alt="Chapati" loading="lazy">
+                    <span class="food-badge veg-badge">Veg</span>
+                </div>
+                <div class="food-info">
+                    <h3>Chapati</h3>
+                    <p class="food-desc">Whole wheat flatbread, served fresh with your choice of curry.</p>
+                    <div class="food-footer">
+                        <span class="price">₹289</span>
+                        <button class="btn-order" aria-label="Order Chapati">+ Add</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="card food-card">
-                <img src="/img/poori.png" alt="Poori Masala">
-                <h3>Poori Masala</h3>
-                <p class="price">₹289</p>
+            <div class="food-card" data-category="veg" data-delay="225">
+                <div class="food-img-wrap">
+                    <img src="/img/poori.png" alt="Poori Masala" loading="lazy">
+                    <span class="food-badge veg-badge">Veg</span>
+                </div>
+                <div class="food-info">
+                    <h3>Poori Masala</h3>
+                    <p class="food-desc">Puffed fried bread with hearty potato masala.</p>
+                    <div class="food-footer">
+                        <span class="price">₹289</span>
+                        <button class="btn-order" aria-label="Order Poori Masala">+ Add</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="card food-card">
-                <img src="/img/bur.png" alt="Burger">
-                <h3>Veg Burger</h3>
-                <p class="price">₹349</p>
+            <div class="food-card" data-category="special" data-delay="300">
+                <div class="food-img-wrap">
+                    <img src="/img/bur.png" alt="Veg Burger" loading="lazy">
+                    <span class="food-badge special-badge">Special</span>
+                </div>
+                <div class="food-info">
+                    <h3>Veg Burger</h3>
+                    <p class="food-desc">Crispy patty stacked with fresh vegetables, house sauce and brioche bun.</p>
+                    <div class="food-footer">
+                        <span class="price">₹349</span>
+                        <button class="btn-order" aria-label="Order Veg Burger">+ Add</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="card food-card">
-                <img src="/img/pizza.png" alt="Pizza">
-                <h3>Pizza Special</h3>
-                <p class="price">₹399</p>
+            <div class="food-card" data-category="special" data-delay="375">
+                <div class="food-img-wrap">
+                    <img src="/img/pizza.png" alt="Pizza Special" loading="lazy">
+                    <span class="food-badge special-badge">Special</span>
+                </div>
+                <div class="food-info">
+                    <h3>Pizza Special</h3>
+                    <p class="food-desc">Stone-baked thin crust with chef's seasonal toppings and aged mozzarella.</p>
+                    <div class="food-footer">
+                        <span class="price">₹399</span>
+                        <button class="btn-order" aria-label="Order Pizza Special">+ Add</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="card food-card">
-                <img src="/img/cb.png" alt="Chicken Briyani">
-                <h3>Chicken Briyani</h3>
-                <p class="price">₹479</p>
+            <div class="food-card" data-category="nonveg" data-delay="450">
+                <div class="food-img-wrap">
+                    <img src="/img/cb.png" alt="Chicken Biryani" loading="lazy">
+                    <span class="food-badge nonveg-badge">Non-Veg</span>
+                </div>
+                <div class="food-info">
+                    <h3>Chicken Biryani</h3>
+                    <p class="food-desc">Slow-cooked basmati rice layered with tender chicken and whole spices.</p>
+                    <div class="food-footer">
+                        <span class="price">₹479</span>
+                        <button class="btn-order" aria-label="Order Chicken Biryani">+ Add</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="card food-card">
-                <img src="/img/grill.png" alt="Grilled Chicken">
-                <h3>Grilled Chicken</h3>
-                <p class="price">₹699</p>
+            <div class="food-card" data-category="nonveg" data-delay="525">
+                <div class="food-img-wrap">
+                    <img src="/img/grill.png" alt="Grilled Chicken" loading="lazy">
+                    <span class="food-badge nonveg-badge">Non-Veg</span>
+                </div>
+                <div class="food-info">
+                    <h3>Grilled Chicken</h3>
+                    <p class="food-desc">Free-range chicken, marinated overnight and chargrilled to perfection.</p>
+                    <div class="food-footer">
+                        <span class="price">₹699</span>
+                        <button class="btn-order" aria-label="Order Grilled Chicken">+ Add</button>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
+</section>
 
-
+<!-- STATS STRIP -->
+<section class="stats-strip" data-reveal>
+    <div class="container stats-grid">
+        <div class="stat-item">
+            <span class="stat-num" data-count="2500">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Happy Guests Monthly</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <span class="stat-num" data-count="40">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Dishes on the Menu</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <span class="stat-num" data-count="12">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Years of Excellence</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+            <span class="stat-num" data-count="98">0</span><span class="stat-suffix">%</span>
+            <span class="stat-label">Satisfaction Rate</span>
         </div>
     </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section contact fade-up" id="contact">
-    <div class="container contact-box">
-        <h2>Contact Us</h2>
+<section class="section contact" id="contact" data-reveal>
+    <div class="container contact-layout">
+        <div class="contact-info">
+            <p class="section-eyebrow">Get in Touch</p>
+            <h2 class="section-title">We'd Love to<br>Hear from You</h2>
+            <p class="contact-desc">Whether you're planning a birthday dinner, a corporate lunch, or simply want to ask about our menu — we're here.</p>
 
-        <form id="contactForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-        <br>
-        <p id="successMsg" class="success-message"></p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <strong>Address</strong>
+                        <p>123 Food Street, Indiranagar, Bangalore 560038</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <strong>Phone</strong>
+                        <p>+91 98765 43210</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">⏰</span>
+                    <div>
+                        <strong>Hours</strong>
+                        <p>Monday – Sunday: 11am – 11pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-wrap">
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="nameInput">Your Name</label>
+                    <input type="text" id="nameInput" placeholder="e.g. Ravi Kumar" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailInput">Email Address</label>
+                    <input type="email" id="emailInput" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phoneInput">Phone (optional)</label>
+                    <input type="tel" id="phoneInput" placeholder="+91 98765 43210">
+                </div>
+                <div class="form-group">
+                    <label for="msgInput">Message</label>
+                    <textarea id="msgInput" rows="4" placeholder="Tell us about your reservation, query or feedback…" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary btn-full">Send Message</button>
+            </form>
+            <div id="successMsg" class="success-message" aria-live="polite"></div>
+        </div>
     </div>
 </section>
 
-<footer>
-    <p>© 2026 MR Restaurant | Designed by Manoj</p>
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <span class="logo-text">MR<em>Restaurant</em></span>
+            <p>Honest food, served with heart.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p class="footer-copy">© 2026 MR Restaurant · Designed by Manoj</p>
+    </div>
 </footer>
 
-<!-- LIGHT JS -->
-<script>
-    // Scroll Animation
-    const elements = document.querySelectorAll('.fade-up');
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add('show');
-            }
-        });
-    });
-
-    elements.forEach(el => observer.observe(el));
-
-    // Form Submit Message
-    const form = document.getElementById("contactForm");
-    const msg = document.getElementById("successMsg");
-
-    form.addEventListener("submit", function(e){
-        e.preventDefault();
-        msg.innerText = "✅ Thank you! Your message has been sent successfully.";
-        msg.style.display = "block";
-        form.reset();
-    });
-</script>
-
+<script src="main.js"></script>
 </body>
 </html>
