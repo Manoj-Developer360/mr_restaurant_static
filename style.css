@@ -452,13 +452,15 @@ h1, h2, h3 {
 }
 
 /* ── REVEAL ANIMATION ────────────────────────────── */
-[data-reveal] {
+/* Only hide sections once JS is confirmed active (body.js-ready).
+   This prevents invisible content if JS/CSS loads out of order on any host. */
+body.js-ready [data-reveal] {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
 }
 
-[data-reveal].revealed {
+body.js-ready [data-reveal].revealed {
     opacity: 1;
     transform: translateY(0);
 }
